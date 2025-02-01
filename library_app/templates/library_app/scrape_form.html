@@ -6,8 +6,8 @@
 <body>
     <h1>청구번호 검색</h1>
     <form method="get" action="{% url 'scrape_call_numbers' %}">
-        <label for="query">검색어:</label>
-        <input type="text" id="query" name="query" required>
+        <label for="query">검색어를 입력하세요 (여러 검색어는 쉼표로 구분):</label><br>
+        <input type="text" id="query" name="query" placeholder="예: 책1, 책2, 책3">
         <button type="submit">검색</button>
     </form>
     {% if error %}
