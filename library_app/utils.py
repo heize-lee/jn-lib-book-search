@@ -52,7 +52,4 @@ def get_call_numbers(query):
             # 데이터가 누락된 경우 해당 항목 건너뛰기
             continue
 
-    # 디버깅 출력
-    print("스크래핑 결과:", results)
-
     return results
