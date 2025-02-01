@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-hckkjcdv(jgw=(9t2%7vv)-_qf6!gj)s#vkfzk$4jsp4nza^p^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['jn-lib-book-search.onrender.com', '127.0.0.1', 'localhost']
+
 
 
 # Application definition
@@ -72,7 +73,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ROOT_URLCONF = 'config.urls'
 # 정적 파일 설정
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 
