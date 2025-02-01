@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>청구번호 검색</title>
+</head>
+<body>
+    <h1>청구번호 검색</h1>
+    <form method="get" action="{% url 'scrape_call_numbers' %}">
+        <label for="query">검색어:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">검색</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
